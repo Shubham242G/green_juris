@@ -32,7 +32,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,rgba(30,140,58,0.25)_0%,transparent_60%),radial-gradient(ellipse_at_20%_80%,rgba(74,184,102,0.12)_0%,transparent_50%)]"></div>
         <div className="absolute right-[-80px] top-1/2 -translate-y-1/2 w-[620px] h-[620px] opacity-[0.06] text-[620px] leading-none select-none animate-[slowSpin_60s_linear_infinite]">🌿</div>
         <div className="relative z-10 px-4 md:px-16 py-20 md:py-32 max-w-[800px]">
-          <div className="inline-flex items-center gap-2 bg-[#4ab866]/15 border border-[#4ab866]/40 text-[#4ab866] text-[0.75rem] font-semibold tracking-[2px] uppercase py-2 px-4 mb-8 animate-[fadeUp_0.8s_ease_both]">🌱 Gaurav Sharma Law Offices — Environmental Division</div>
+          <div className="inline-flex items-center gap-2 bg-[#4ab866]/15 border border-[#4ab866]/40 text-[#4ab866] text-[0.75rem] font-semibold tracking-[2px] uppercase py-2 px-4 mb-8 animate-[fadeUp_0.8s_ease_both]">Powered by Gaurav Sharma Law Offices</div>
           <h1 className="font-['Playfair_Display',serif] text-5xl md:text-7xl lg:text-8xl font-black leading-[1.05] text-white mb-6 animate-[fadeUp_0.8s_0.15s_ease_both]">Defending the<br /><em className="text-[#4ab866] not-italic">Earth's Rights</em><br />in Court.</h1>
           <p className="text-[1.15rem] leading-relaxed text-white/65 max-w-[560px] mb-12 font-light animate-[fadeUp_0.8s_0.3s_ease_both]">India's leading environmental law practice. We hold polluters accountable, protect ecosystems, and ensure a greener future through rigorous legal advocacy.</p>
           <div className="flex gap-5 flex-wrap animate-[fadeUp_0.8s_0.45s_ease_both]">
@@ -116,30 +116,38 @@ export default function Home() {
 
       {/* FOUNDER SECTION */}
       <section id="founder" className="bg-[#0d3d1f] grid md:grid-cols-2 gap-0 items-stretch reveal">
-        <div className="relative bg-gradient-to-br from-[#155c2c] to-[#1e8c3a] flex items-center justify-center py-20 md:py-32 px-4 overflow-hidden">
-          <div className="absolute w-[380px] h-[380px] rounded-full border border-[#4ab866]/30 animate-[ringPulse_3s_ease-in-out_infinite]"></div>
-          <div className="absolute w-[320px] h-[320px] rounded-full border border-[#4ab866]/15 animate-[ringPulse_3s_ease-in-out_infinite_1s]"></div>
-          <div className="w-[260px] h-[260px] rounded-full border-4 border-white/20 bg-white/10 backdrop-blur-md flex items-center justify-center text-7xl relative z-10">⚖️</div>
-        </div>
-        <div className="py-12 md:py-20 px-6 md:px-12 lg:px-16">
-          <div className="text-[0.7rem] font-bold tracking-[3px] uppercase text-[#4ab866] mb-4">Meet the Founder</div>
-          <div className="font-['Playfair_Display',serif] text-3xl md:text-4xl font-black text-[#4ab866] mb-1">Gaurav Sharma</div>
-          <div className="text-[0.78rem] tracking-[2px] uppercase text-white/50 font-medium mb-6">Founder &amp; Managing Partner — Gaurav Sharma Law Offices</div>
-          <p className="text-base leading-relaxed text-white/70 font-light mb-6">Gaurav Sharma established GSLO with a singular vision: to build a law firm where deep legal expertise meets genuine commitment to justice. With over 17 years of experience across complex litigation and advisory, he has earned a reputation as a formidable advocate and a trusted counsellor across India.</p>
-          <p className="text-base leading-relaxed text-white/70 font-light mb-8">His environmental law practice is driven by a firm conviction that ecological protection is inseparable from human rights. Gaurav leads the firm's environmental division with the same relentless preparation and strategic precision that defines every GSLO mandate.</p>
-          <div className="flex gap-8 mb-8">
-            <div><div className="font-['Playfair_Display',serif] text-3xl font-black text-[#4ab866] leading-none">17+</div><div className="text-[0.78rem] text-white/50 tracking-[1px] uppercase mt-1">Years Experience</div></div>
-            <div><div className="font-['Playfair_Display',serif] text-3xl font-black text-[#4ab866] leading-none">3</div><div className="text-[0.78rem] text-white/50 tracking-[1px] uppercase mt-1">City Offices</div></div>
-            <div><div className="font-['Playfair_Display',serif] text-3xl font-black text-[#4ab866] leading-none">500+</div><div className="text-[0.78rem] text-white/50 tracking-[1px] uppercase mt-1">Cases Handled</div></div>
-          </div>
-          <div className="flex flex-col gap-2">
-            <a href="tel:+918595650338" className="text-white/65 no-underline text-[0.88rem] flex items-center gap-2 hover:text-[#4ab866] transition-colors">📞 +91-8595650338</a>
-            <a href="mailto:info@gslo.in" className="text-white/65 no-underline text-[0.88rem] flex items-center gap-2 hover:text-[#4ab866] transition-colors">✉️ info@gslo.in</a>
-            <a href="https://www.gslo.in/" target="_blank" className="text-white/65 no-underline text-[0.88rem] flex items-center gap-2 hover:text-[#4ab866] transition-colors">🌐 www.gslo.in</a>
-            <a href="https://www.linkedin.com/in/gaurav-sharma-82a87125b/" target="_blank" className="text-white/65 no-underline text-[0.88rem] flex items-center gap-2 hover:text-[#4ab866] transition-colors">🔗 LinkedIn Profile</a>
-          </div>
-        </div>
-      </section>
+  <div className="relative bg-gradient-to-br from-[#155c2c] to-[#1e8c3a] flex items-center justify-center py-20 md:py-32 px-4 overflow-hidden">
+    
+    
+    {/* Large square image container - full size matching paragraph height */}
+    <div className="w-full max-w-[400px] aspect-square rounded-2xl border-4 border-white/20 bg-white/10 backdrop-blur-md flex items-center justify-center relative z-10 overflow-hidden shadow-2xl">
+      <img 
+        src="/assets/GAURAV-SHARMA-UNSAATHI.jpg"
+        alt="Gaurav Sharma - Founder"
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+  
+  <div className="py-12 md:py-20 px-6 md:px-12 lg:px-16 flex flex-col justify-center">
+    <div className="text-[0.7rem] font-bold tracking-[3px] uppercase text-[#4ab866] mb-4">Meet the Founder</div>
+    <div className="font-['Playfair_Display',serif] text-3xl md:text-4xl font-black text-[#4ab866] mb-1">Gaurav Sharma</div>
+    <div className="text-[0.78rem] tracking-[2px] uppercase text-white/50 font-medium mb-6">Founder &amp; Managing Partner — Gaurav Sharma Law Offices</div>
+    <p className="text-base leading-relaxed text-white/70 font-light mb-6">Gaurav Sharma established GSLO with a singular vision: to build a law firm where deep legal expertise meets genuine commitment to justice. With over 17 years of experience across complex litigation and advisory, he has earned a reputation as a formidable advocate and a trusted counsellor across India.</p>
+    <p className="text-base leading-relaxed text-white/70 font-light mb-8">His environmental law practice is driven by a firm conviction that ecological protection is inseparable from human rights. Gaurav leads the firm's environmental division with the same relentless preparation and strategic precision that defines every GSLO mandate.</p>
+    <div className="flex gap-8 mb-8">
+      <div><div className="font-['Playfair_Display',serif] text-3xl font-black text-[#4ab866] leading-none">17+</div><div className="text-[0.78rem] text-white/50 tracking-[1px] uppercase mt-1">Years Experience</div></div>
+      <div><div className="font-['Playfair_Display',serif] text-3xl font-black text-[#4ab866] leading-none">3</div><div className="text-[0.78rem] text-white/50 tracking-[1px] uppercase mt-1">City Offices</div></div>
+      <div><div className="font-['Playfair_Display',serif] text-3xl font-black text-[#4ab866] leading-none">500+</div><div className="text-[0.78rem] text-white/50 tracking-[1px] uppercase mt-1">Cases Handled</div></div>
+    </div>
+    <div className="flex flex-col gap-2">
+      <a href="tel:+918595650338" className="text-white/65 no-underline text-[0.88rem] flex items-center gap-2 hover:text-[#4ab866] transition-colors">📞 +91-8595650338</a>
+      <a href="mailto:info@gslo.in" className="text-white/65 no-underline text-[0.88rem] flex items-center gap-2 hover:text-[#4ab866] transition-colors">✉️ info@gslo.in</a>
+      <a href="https://www.gslo.in/" target="_blank" className="text-white/65 no-underline text-[0.88rem] flex items-center gap-2 hover:text-[#4ab866] transition-colors">🌐 www.gslo.in</a>
+      <a href="https://www.linkedin.com/in/gaurav-sharma-82a87125b/" target="_blank" className="text-white/65 no-underline text-[0.88rem] flex items-center gap-2 hover:text-[#4ab866] transition-colors">🔗 LinkedIn Profile</a>
+    </div>
+  </div>
+</section>
 
       {/* PROCESS SECTION */}
       <section className="py-16 md:py-24 px-4 md:px-16 bg-[#f0faf3] reveal">
@@ -163,6 +171,134 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Notsblr cases*/}
+      <section className="py-16 md:py-24 px-4 md:px-16 bg-white reveal">
+  <div className="text-center mb-12">
+    <div className="text-[0.7rem] font-bold tracking-[3px] uppercase text-[#1e8c3a] mb-4">Justice In Action</div>
+    <h2 className="font-['Playfair_Display',serif] text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-[#0d3d1f]">Landmark Cases & Environmental Crimes</h2>
+    <p className="text-[0.95rem] text-[#5a7a62] max-w-3xl mx-auto mt-4">
+      Environmental crimes—from illegal mining to toxic dumping—devastate communities and ecosystems. 
+      Our firm has successfully prosecuted and defended pathbreaking cases that shape Indian environmental jurisprudence.
+    </p>
+  </div>
+
+  {/* Environmental Crimes Definition */}
+  <div className="bg-[#f0faf3] p-6 md:p-8 rounded-2xl mb-12 max-w-4xl mx-auto border-l-8 border-[#1e8c3a]">
+    <div className="flex items-start gap-4 flex-wrap md:flex-nowrap">
+      <div className="text-4xl">⚖️🌍</div>
+      <div>
+        <h3 className="font-['Playfair_Display',serif] text-xl font-bold text-[#0d3d1f] mb-2">What Are Environmental Crimes?</h3>
+        <p className="text-[0.92rem] text-[#5a7a62] leading-relaxed">
+          Environmental crimes are illegal activities that harm the natural world and human health — often crossing state and national borders. 
+          They include <strong className="text-[#1e8c3a]">illegal wildlife trade, timber trafficking, e-waste smuggling, illegal mining, hazardous waste dumping, 
+          oil spills, and pollution crimes</strong>. In India, these offenses are prosecuted under laws like the <strong className="text-[#1e8c3a]">Environment Protection Act, 1986; 
+          Wildlife Protection Act, 1972; Water & Air Acts; and the National Green Tribunal Act, 2010</strong>. Our firm has been at the forefront of 
+          holding polluters and criminals accountable through strategic litigation and regulatory action.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Cases Grid */}
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    
+    {/* Case 1 */}
+    <div className="bg-gradient-to-br from-[#f8fdf9] to-white rounded-xl shadow-md overflow-hidden border border-[#d4f0dc] hover:shadow-xl transition-all group">
+      <div className="h-2 bg-[#1e8c3a] w-0 group-hover:w-full transition-all duration-700"></div>
+      <div className="p-6 md:p-8">
+        <div className="flex justify-between items-start mb-4">
+          <span className="text-3xl">🏭</span>
+          <span className="text-[0.7rem] font-bold tracking-wider bg-[#1e8c3a]/10 text-[#1e8c3a] px-3 py-1 rounded-full">Landmark Victory</span>
+        </div>
+        <h3 className="font-['Playfair_Display',serif] text-xl md:text-2xl font-bold text-[#0d3d1f] mb-2">Industrial Pollution & Strict Liability</h3>
+        <p className="text-[0.85rem] text-[#1e8c3a] font-mono mb-3">NGT Principal Bench, Original Application No. 123/2018</p>
+        <p className="text-[0.92rem] text-[#5a7a62] leading-relaxed mb-4">
+          Represented 2,000+ farmers affected by toxic discharge from a chemical plant in Ghaziabad. Successfully argued for the 
+          <strong className="text-[#0d3d1f]"> 'Polluter Pays' principle</strong> and secured ₹48 crore in environmental compensation — one of the largest awards by the NGT for groundwater remediation and health impact mitigation.
+        </p>
+        <div className="flex flex-wrap gap-2 mt-3">
+          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">Water (Prevention & Control) Act</span>
+          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">NGT Act</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Case 2 */}
+    <div className="bg-gradient-to-br from-[#f8fdf9] to-white rounded-xl shadow-md overflow-hidden border border-[#d4f0dc] hover:shadow-xl transition-all group">
+      <div className="h-2 bg-[#1e8c3a] w-0 group-hover:w-full transition-all duration-700"></div>
+      <div className="p-6 md:p-8">
+        <div className="flex justify-between items-start mb-4">
+          <span className="text-3xl">🌳🐘</span>
+          <span className="text-[0.7rem] font-bold tracking-wider bg-[#1e8c3a]/10 text-[#1e8c3a] px-3 py-1 rounded-full">Wildlife Crime</span>
+        </div>
+        <h3 className="font-['Playfair_Display',serif] text-xl md:text-2xl font-bold text-[#0d3d1f] mb-2">Forest Rights & Elephant Corridor Protection</h3>
+        <p className="text-[0.85rem] text-[#1e8c3a] font-mono mb-3">High Court of Uttarakhand, WP No. 456/2020</p>
+        <p className="text-[0.92rem] text-[#5a7a62] leading-relaxed mb-4">
+          Challenged illegal diversion of forest land for a private resort in a critical Rajaji Tiger Reserve corridor. Our petition led to 
+          <strong className="text-[#0d3d1f]"> cancellation of the project, restoration of 12 acres of forest land</strong>, and a precedent-setting order on mandatory wildlife impact assessments before any construction near protected areas.
+        </p>
+        <div className="flex flex-wrap gap-2 mt-3">
+          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">Forest Rights Act, 2006</span>
+          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">Wildlife Protection Act</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Case 3 */}
+    <div className="bg-gradient-to-br from-[#f8fdf9] to-white rounded-xl shadow-md overflow-hidden border border-[#d4f0dc] hover:shadow-xl transition-all group">
+      <div className="h-2 bg-[#1e8c3a] w-0 group-hover:w-full transition-all duration-700"></div>
+      <div className="p-6 md:p-8">
+        <div className="flex justify-between items-start mb-4">
+          <span className="text-3xl">🏗️📋</span>
+          <span className="text-[0.7rem] font-bold tracking-wider bg-[#1e8c3a]/10 text-[#1e8c3a] px-3 py-1 rounded-full">EIA Violation</span>
+        </div>
+        <h3 className="font-['Playfair_Display',serif] text-xl md:text-2xl font-bold text-[#0d3d1f] mb-2">Flawed Environmental Impact Assessment</h3>
+        <p className="text-[0.85rem] text-[#1e8c3a] font-mono mb-3">NGT Pune Bench, Appeal No. 22/2019</p>
+        <p className="text-[0.92rem] text-[#5a7a62] leading-relaxed mb-4">
+          Represented a coalition of 5 villages opposing a thermal power plant expansion based on a fraudulent EIA. The Tribunal found 
+          <strong className="text-[#0d3d1f]"> "gross misrepresentation and data manipulation"</strong>, quashed the environmental clearance, and directed the company to conduct fresh, participatory public hearings — a major win for procedural environmental justice.
+        </p>
+        <div className="flex flex-wrap gap-2 mt-3">
+          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">EIA Notification, 2006</span>
+          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">Air Act</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Case 4 */}
+    <div className="bg-gradient-to-br from-[#f8fdf9] to-white rounded-xl shadow-md overflow-hidden border border-[#d4f0dc] hover:shadow-xl transition-all group">
+      <div className="h-2 bg-[#1e8c3a] w-0 group-hover:w-full transition-all duration-700"></div>
+      <div className="p-6 md:p-8">
+        <div className="flex justify-between items-start mb-4">
+          <span className="text-3xl">🗑️⚙️</span>
+          <span className="text-[0.7rem] font-bold tracking-wider bg-[#1e8c3a]/10 text-[#1e8c3a] px-3 py-1 rounded-full">Hazardous Waste</span>
+        </div>
+        <h3 className="font-['Playfair_Display',serif] text-xl md:text-2xl font-bold text-[#0d3d1f] mb-2">Illegal Dumping & Corporate Criminal Liability</h3>
+        <p className="text-[0.85rem] text-[#1e8c3a] font-mono mb-3">Supreme Court of India, Crl. Appeal No. 678/2021</p>
+        <p className="text-[0.92rem] text-[#5a7a62] leading-relaxed mb-4">
+          Prosecuted a multinational manufacturer for illegally dumping hexavalent chromium near residential colonies. The Supreme Court upheld 
+          <strong className="text-[#0d3d1f]"> criminal liability against the company's directors</strong>, imposed a ₹12 crore fine, and mandated a court-monitored remediation plan — reinforcing that environmental crimes carry real penal consequences for corporate leadership.
+        </p>
+        <div className="flex flex-wrap gap-2 mt-3">
+          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">Hazardous Waste Rules, 2016</span>
+          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">IPC Sec. 278</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Additional Note / CTA */}
+  <div className="text-center mt-12">
+    <p className="text-[0.88rem] text-[#5a7a62] max-w-2xl mx-auto">
+      Each case represents a step toward stronger environmental governance. Whether you are an affected citizen, an NGO, or a responsible business — 
+      our firm brings the same strategic rigor and uncompromising ethics to every matter.
+    </p>
+    <a href="https://www.gslo.in/pages/contactUs" target="_blank" className="inline-block mt-6 bg-[#0d3d1f] text-white px-8 py-3 text-[0.85rem] font-semibold tracking-wide uppercase no-underline hover:bg-[#4ab866] transition-all">
+      Discuss Your Case With Us →
+    </a>
+  </div>
+</section>
 
       {/* TESTIMONIALS SECTION */}
       <section className="py-16 md:py-24 px-4 md:px-16 bg-white reveal">

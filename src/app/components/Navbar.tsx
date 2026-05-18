@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import Image from "next/image";  // ← ADD THIS IMPORT
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,8 +29,15 @@ export default function Navbar() {
         }`}
       >
         <a href="/" className="flex items-center gap-3 no-underline">
-          <div className="w-9 h-9 bg-[#4ab866] rounded-[50%_0_50%_50%] -rotate-30 flex items-center justify-center text-base animate-[spin_60s_linear_infinite]">
-            🌿
+          {/* REPLACE THIS DIV WITH YOUR LOGO IMAGE */}
+          <div className="relative">  {/* Added 'relative' for Next.js Image */}
+            <Image
+              src="/assets/greenjuris.png"  // ← CHANGE THIS to your filename
+              alt="GreenJuris Logo"
+              fill
+              className="object-contain w-100 h-100 "
+              priority  // Loads faster since it's above the fold
+            />
           </div>
           <span className="font-['Playfair_Display',serif] text-xl md:text-[1.4rem] font-black text-white tracking-[1px]">
             Green<span className="text-[#4ab866]">Juris</span>
