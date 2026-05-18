@@ -172,7 +172,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Notsblr cases*/}
+      {/* Notable cases*/}
       <section className="py-16 md:py-24 px-4 md:px-16 bg-white reveal">
   <div className="text-center mb-12">
     <div className="text-[0.7rem] font-bold tracking-[3px] uppercase text-[#1e8c3a] mb-4">Justice In Action</div>
@@ -186,7 +186,6 @@ export default function Home() {
   {/* Environmental Crimes Definition */}
   <div className="bg-[#f0faf3] p-6 md:p-8 rounded-2xl mb-12 max-w-4xl mx-auto border-l-8 border-[#1e8c3a]">
     <div className="flex items-start gap-4 flex-wrap md:flex-nowrap">
-      <div className="text-4xl">⚖️🌍</div>
       <div>
         <h3 className="font-['Playfair_Display',serif] text-xl font-bold text-[#0d3d1f] mb-2">What Are Environmental Crimes?</h3>
         <p className="text-[0.92rem] text-[#5a7a62] leading-relaxed">
@@ -208,7 +207,6 @@ export default function Home() {
       <div className="h-2 bg-[#1e8c3a] w-0 group-hover:w-full transition-all duration-700"></div>
       <div className="p-6 md:p-8">
         <div className="flex justify-between items-start mb-4">
-          <span className="text-3xl">🏭</span>
           <span className="text-[0.7rem] font-bold tracking-wider bg-[#1e8c3a]/10 text-[#1e8c3a] px-3 py-1 rounded-full">Landmark Victory</span>
         </div>
         <h3 className="font-['Playfair_Display',serif] text-xl md:text-2xl font-bold text-[#0d3d1f] mb-2">Industrial Pollution & Strict Liability</h3>
@@ -229,7 +227,6 @@ export default function Home() {
       <div className="h-2 bg-[#1e8c3a] w-0 group-hover:w-full transition-all duration-700"></div>
       <div className="p-6 md:p-8">
         <div className="flex justify-between items-start mb-4">
-          <span className="text-3xl">🌳🐘</span>
           <span className="text-[0.7rem] font-bold tracking-wider bg-[#1e8c3a]/10 text-[#1e8c3a] px-3 py-1 rounded-full">Wildlife Crime</span>
         </div>
         <h3 className="font-['Playfair_Display',serif] text-xl md:text-2xl font-bold text-[#0d3d1f] mb-2">Forest Rights & Elephant Corridor Protection</h3>
@@ -250,7 +247,6 @@ export default function Home() {
       <div className="h-2 bg-[#1e8c3a] w-0 group-hover:w-full transition-all duration-700"></div>
       <div className="p-6 md:p-8">
         <div className="flex justify-between items-start mb-4">
-          <span className="text-3xl">🏗️📋</span>
           <span className="text-[0.7rem] font-bold tracking-wider bg-[#1e8c3a]/10 text-[#1e8c3a] px-3 py-1 rounded-full">EIA Violation</span>
         </div>
         <h3 className="font-['Playfair_Display',serif] text-xl md:text-2xl font-bold text-[#0d3d1f] mb-2">Flawed Environmental Impact Assessment</h3>
@@ -271,7 +267,6 @@ export default function Home() {
       <div className="h-2 bg-[#1e8c3a] w-0 group-hover:w-full transition-all duration-700"></div>
       <div className="p-6 md:p-8">
         <div className="flex justify-between items-start mb-4">
-          <span className="text-3xl">🗑️⚙️</span>
           <span className="text-[0.7rem] font-bold tracking-wider bg-[#1e8c3a]/10 text-[#1e8c3a] px-3 py-1 rounded-full">Hazardous Waste</span>
         </div>
         <h3 className="font-['Playfair_Display',serif] text-xl md:text-2xl font-bold text-[#0d3d1f] mb-2">Illegal Dumping & Corporate Criminal Liability</h3>
