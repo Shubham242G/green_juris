@@ -56,10 +56,10 @@ export default function Navbar() {
           </li>
           <li>
             <a
-              href="#services"
+              href="/services"
               className="text-white/80 no-underline text-[0.85rem] font-medium tracking-[1.5px] uppercase hover:text-[#4ab866] transition-colors"
             >
-              Practice Areas
+              Services
             </a>
           </li>
           <li>
@@ -118,11 +118,11 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="#services"
+                href="/services"
                 className="text-white/80 no-underline text-sm font-medium tracking-[1.5px] uppercase hover:text-[#4ab866]"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Practice Areas
+                Services
               </a>
             </li>
             <li>
