@@ -106,7 +106,6 @@ export default function Home() {
           ].map((service, idx) => (
             <div key={idx} className="bg-white p-6 md:p-10 hover:bg-[#f0faf3] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(13,61,31,0.1)] transition-all relative group">
               <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-[#1e8c3a] transition-all duration-500 group-hover:w-full"></div>
-              <span className="text-3xl mb-4 block">{service.icon}</span>
               <div className="font-['Playfair_Display',serif] text-xl font-bold text-[#0d3d1f] mb-2">{service.title}</div>
               <p className="text-[0.88rem] leading-relaxed text-[#5a7a62] font-light">{service.desc}</p>
             </div>
@@ -171,129 +170,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      {/* Notable cases*/}
-      <section className="py-16 md:py-24 px-4 md:px-16 bg-white reveal">
-  <div className="text-center mb-12">
-    <div className="text-[0.7rem] font-bold tracking-[3px] uppercase text-[#1e8c3a] mb-4">Justice In Action</div>
-    <h2 className="font-['Playfair_Display',serif] text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-[#0d3d1f]">Landmark Cases & Environmental Crimes</h2>
-    <p className="text-[0.95rem] text-[#5a7a62] max-w-3xl mx-auto mt-4">
-      Environmental crimes—from illegal mining to toxic dumping—devastate communities and ecosystems. 
-      Our firm has successfully prosecuted and defended pathbreaking cases that shape Indian environmental jurisprudence.
-    </p>
-  </div>
-
-  {/* Environmental Crimes Definition */}
-  <div className="bg-[#f0faf3] p-6 md:p-8 rounded-2xl mb-12 max-w-4xl mx-auto border-l-8 border-[#1e8c3a]">
-    <div className="flex items-start gap-4 flex-wrap md:flex-nowrap">
-      <div>
-        <h3 className="font-['Playfair_Display',serif] text-xl font-bold text-[#0d3d1f] mb-2">What Are Environmental Crimes?</h3>
-        <p className="text-[0.92rem] text-[#5a7a62] leading-relaxed">
-          Environmental crimes are illegal activities that harm the natural world and human health — often crossing state and national borders. 
-          They include <strong className="text-[#1e8c3a]">illegal wildlife trade, timber trafficking, e-waste smuggling, illegal mining, hazardous waste dumping, 
-          oil spills, and pollution crimes</strong>. In India, these offenses are prosecuted under laws like the <strong className="text-[#1e8c3a]">Environment Protection Act, 1986; 
-          Wildlife Protection Act, 1972; Water & Air Acts; and the National Green Tribunal Act, 2010</strong>. Our firm has been at the forefront of 
-          holding polluters and criminals accountable through strategic litigation and regulatory action.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  {/* Cases Grid */}
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-    
-    {/* Case 1 */}
-    <div className="bg-gradient-to-br from-[#f8fdf9] to-white rounded-xl shadow-md overflow-hidden border border-[#d4f0dc] hover:shadow-xl transition-all group">
-      <div className="h-2 bg-[#1e8c3a] w-0 group-hover:w-full transition-all duration-700"></div>
-      <div className="p-6 md:p-8">
-        <div className="flex justify-between items-start mb-4">
-          <span className="text-[0.7rem] font-bold tracking-wider bg-[#1e8c3a]/10 text-[#1e8c3a] px-3 py-1 rounded-full">Landmark Victory</span>
-        </div>
-        <h3 className="font-['Playfair_Display',serif] text-xl md:text-2xl font-bold text-[#0d3d1f] mb-2">Industrial Pollution & Strict Liability</h3>
-        <p className="text-[0.85rem] text-[#1e8c3a] font-mono mb-3">NGT Principal Bench, Original Application No. 123/2018</p>
-        <p className="text-[0.92rem] text-[#5a7a62] leading-relaxed mb-4">
-          Represented 2,000+ farmers affected by toxic discharge from a chemical plant in Ghaziabad. Successfully argued for the 
-          <strong className="text-[#0d3d1f]"> 'Polluter Pays' principle</strong> and secured ₹48 crore in environmental compensation — one of the largest awards by the NGT for groundwater remediation and health impact mitigation.
-        </p>
-        <div className="flex flex-wrap gap-2 mt-3">
-          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">Water (Prevention & Control) Act</span>
-          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">NGT Act</span>
-        </div>
-      </div>
-    </div>
-
-    {/* Case 2 */}
-    <div className="bg-gradient-to-br from-[#f8fdf9] to-white rounded-xl shadow-md overflow-hidden border border-[#d4f0dc] hover:shadow-xl transition-all group">
-      <div className="h-2 bg-[#1e8c3a] w-0 group-hover:w-full transition-all duration-700"></div>
-      <div className="p-6 md:p-8">
-        <div className="flex justify-between items-start mb-4">
-          <span className="text-[0.7rem] font-bold tracking-wider bg-[#1e8c3a]/10 text-[#1e8c3a] px-3 py-1 rounded-full">Wildlife Crime</span>
-        </div>
-        <h3 className="font-['Playfair_Display',serif] text-xl md:text-2xl font-bold text-[#0d3d1f] mb-2">Forest Rights & Elephant Corridor Protection</h3>
-        <p className="text-[0.85rem] text-[#1e8c3a] font-mono mb-3">High Court of Uttarakhand, WP No. 456/2020</p>
-        <p className="text-[0.92rem] text-[#5a7a62] leading-relaxed mb-4">
-          Challenged illegal diversion of forest land for a private resort in a critical Rajaji Tiger Reserve corridor. Our petition led to 
-          <strong className="text-[#0d3d1f]"> cancellation of the project, restoration of 12 acres of forest land</strong>, and a precedent-setting order on mandatory wildlife impact assessments before any construction near protected areas.
-        </p>
-        <div className="flex flex-wrap gap-2 mt-3">
-          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">Forest Rights Act, 2006</span>
-          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">Wildlife Protection Act</span>
-        </div>
-      </div>
-    </div>
-
-    {/* Case 3 */}
-    <div className="bg-gradient-to-br from-[#f8fdf9] to-white rounded-xl shadow-md overflow-hidden border border-[#d4f0dc] hover:shadow-xl transition-all group">
-      <div className="h-2 bg-[#1e8c3a] w-0 group-hover:w-full transition-all duration-700"></div>
-      <div className="p-6 md:p-8">
-        <div className="flex justify-between items-start mb-4">
-          <span className="text-[0.7rem] font-bold tracking-wider bg-[#1e8c3a]/10 text-[#1e8c3a] px-3 py-1 rounded-full">EIA Violation</span>
-        </div>
-        <h3 className="font-['Playfair_Display',serif] text-xl md:text-2xl font-bold text-[#0d3d1f] mb-2">Flawed Environmental Impact Assessment</h3>
-        <p className="text-[0.85rem] text-[#1e8c3a] font-mono mb-3">NGT Pune Bench, Appeal No. 22/2019</p>
-        <p className="text-[0.92rem] text-[#5a7a62] leading-relaxed mb-4">
-          Represented a coalition of 5 villages opposing a thermal power plant expansion based on a fraudulent EIA. The Tribunal found 
-          <strong className="text-[#0d3d1f]"> "gross misrepresentation and data manipulation"</strong>, quashed the environmental clearance, and directed the company to conduct fresh, participatory public hearings — a major win for procedural environmental justice.
-        </p>
-        <div className="flex flex-wrap gap-2 mt-3">
-          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">EIA Notification, 2006</span>
-          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">Air Act</span>
-        </div>
-      </div>
-    </div>
-
-    {/* Case 4 */}
-    <div className="bg-gradient-to-br from-[#f8fdf9] to-white rounded-xl shadow-md overflow-hidden border border-[#d4f0dc] hover:shadow-xl transition-all group">
-      <div className="h-2 bg-[#1e8c3a] w-0 group-hover:w-full transition-all duration-700"></div>
-      <div className="p-6 md:p-8">
-        <div className="flex justify-between items-start mb-4">
-          <span className="text-[0.7rem] font-bold tracking-wider bg-[#1e8c3a]/10 text-[#1e8c3a] px-3 py-1 rounded-full">Hazardous Waste</span>
-        </div>
-        <h3 className="font-['Playfair_Display',serif] text-xl md:text-2xl font-bold text-[#0d3d1f] mb-2">Illegal Dumping & Corporate Criminal Liability</h3>
-        <p className="text-[0.85rem] text-[#1e8c3a] font-mono mb-3">Supreme Court of India, Crl. Appeal No. 678/2021</p>
-        <p className="text-[0.92rem] text-[#5a7a62] leading-relaxed mb-4">
-          Prosecuted a multinational manufacturer for illegally dumping hexavalent chromium near residential colonies. The Supreme Court upheld 
-          <strong className="text-[#0d3d1f]"> criminal liability against the company's directors</strong>, imposed a ₹12 crore fine, and mandated a court-monitored remediation plan — reinforcing that environmental crimes carry real penal consequences for corporate leadership.
-        </p>
-        <div className="flex flex-wrap gap-2 mt-3">
-          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">Hazardous Waste Rules, 2016</span>
-          <span className="text-[0.7rem] bg-[#e8f0ea] px-2 py-1 rounded text-[#2d5a3a]">IPC Sec. 278</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  {/* Additional Note / CTA */}
-  <div className="text-center mt-12">
-    <p className="text-[0.88rem] text-[#5a7a62] max-w-2xl mx-auto">
-      Each case represents a step toward stronger environmental governance. Whether you are an affected citizen, an NGO, or a responsible business — 
-      our firm brings the same strategic rigor and uncompromising ethics to every matter.
-    </p>
-    <a href="https://www.gslo.in/pages/contactUs" target="_blank" className="inline-block mt-6 bg-[#0d3d1f] text-white px-8 py-3 text-[0.85rem] font-semibold tracking-wide uppercase no-underline hover:bg-[#4ab866] transition-all">
-      Discuss Your Case With Us →
-    </a>
-  </div>
-</section>
+ 
 
       {/* TESTIMONIALS SECTION */}
       <section className="py-16 md:py-24 px-4 md:px-16 bg-white reveal">
