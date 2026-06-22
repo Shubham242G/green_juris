@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Image from "next/image";  // ← ADD THIS IMPORT
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,80 +23,84 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-4 md:px-16 py-4 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
           scrolled
             ? "bg-[#0d3d1f]/95 backdrop-blur-md border-b border-[#4ab866]/20"
             : "bg-[#0d3d1f]"
         }`}
       >
-        <a href="/" className="flex items-center gap-3 no-underline">
-          {/* REPLACE THIS DIV WITH YOUR LOGO IMAGE */}
-          <div className="relative">  {/* Added 'relative' for Next.js Image */}
-            <Image
-              src="/assets/greenjuris.png"  // ← CHANGE THIS to your filename
-              alt="GreenJuris Logo"
-              fill
-              className="object-contain w-100 h-100 "
-              priority  // Loads faster since it's above the fold
-            />
-          </div>
-          <span className="font-['Playfair_Display',serif] text-xl md:text-[1.4rem] font-black text-white tracking-[1px]">
-            Green<span className="text-[#4ab866]">Juris</span>
-          </span>
-        </a>
+        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-1 flex items-center justify-between">
+  {/* Logo - Shifted Left */}
+  <a href="/" className="flex items-center gap-3 no-underline flex-shrink-0 -ml-4 md:-ml-6">
+    <div className="relative w-44 h-44 md:w-56 md:h-56 flex-shrink-0 -my-14 md:-my-16 overflow-visible">
+      {!imageError ? (
+        <img
+          src="/assets/greenjuras.png"
+          alt="GreenJuris Logo"
+          className="w-full h-full object-contain rounded-full"
+          onError={() => setImageError(true)}
+        />
+      ) : (
+        <div className="w-full h-full bg-[#4ab866] rounded-full flex items-center justify-center">
+          <span className="text-white font-bold text-4xl md:text-5xl">GJ</span>
+        </div>
+      )}
+    </div>
+  </a>
 
-        {/* Desktop Navigation */}
-        <ul className="hidden md:flex gap-10 list-none">
-          <li>
-            <a
-              href="#about"
-              className="text-white/80 no-underline text-[0.85rem] font-medium tracking-[1.5px] uppercase hover:text-[#4ab866] transition-colors"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="/services"
-              className="text-white/80 no-underline text-[0.85rem] font-medium tracking-[1.5px] uppercase hover:text-[#4ab866] transition-colors"
-            >
-              Services
-            </a>
-          </li>
-          <li>
-            <a
-              href="#founder"
-              className="text-white/80 no-underline text-[0.85rem] font-medium tracking-[1.5px] uppercase hover:text-[#4ab866] transition-colors"
-            >
-              Founder
-            </a>
-          </li>
-          <li>
-            <a
-              href="#offices"
-              className="text-white/80 no-underline text-[0.85rem] font-medium tracking-[1.5px] uppercase hover:text-[#4ab866] transition-colors"
-            >
-              Offices
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.gslo.in/pages/contactUs"
-              target="_blank"
-              className="bg-[#4ab866] text-white no-underline py-2 px-5 text-[0.85rem] font-medium tracking-[1.5px] uppercase hover:bg-white hover:text-[#0d3d1f] transition-all"
-            >
-              Consult Now
-            </a>
-          </li>
-        </ul>
+  {/* Desktop Navigation */}
+  <ul className="hidden md:flex items-center gap-8 lg:gap-10 list-none">
+    <li>
+      <a
+        href="#about"
+        className="text-white/80 no-underline text-[0.8rem] lg:text-[0.85rem] font-medium tracking-[1.5px] uppercase hover:text-[#4ab866] transition-colors whitespace-nowrap"
+      >
+        About
+      </a>
+    </li>
+    <li>
+      <a
+        href="/services"
+        className="text-white/80 no-underline text-[0.8rem] lg:text-[0.85rem] font-medium tracking-[1.5px] uppercase hover:text-[#4ab866] transition-colors whitespace-nowrap"
+      >
+        Services
+      </a>
+    </li>
+    <li>
+      <a
+        href="#founder"
+        className="text-white/80 no-underline text-[0.8rem] lg:text-[0.85rem] font-medium tracking-[1.5px] uppercase hover:text-[#4ab866] transition-colors whitespace-nowrap"
+      >
+        Founder
+      </a>
+    </li>
+    <li>
+      <a
+        href="#offices"
+        className="text-white/80 no-underline text-[0.8rem] lg:text-[0.85rem] font-medium tracking-[1.5px] uppercase hover:text-[#4ab866] transition-colors whitespace-nowrap"
+      >
+        Offices
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.gslo.in/pages/contactUs"
+        target="_blank"
+        className="bg-[#4ab866] text-white no-underline py-2 px-5 text-[0.8rem] lg:text-[0.85rem] font-medium tracking-[1.5px] uppercase hover:bg-white hover:text-[#0d3d1f] transition-all whitespace-nowrap"
+      >
+        Consult Now
+      </a>
+    </li>
+  </ul>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-white text-2xl"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? "✕" : "☰"}
-        </button>
+  {/* Mobile Menu Button */}
+  <button
+    className="md:hidden text-white text-2xl flex-shrink-0"
+    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+  >
+    {mobileMenuOpen ? "✕" : "☰"}
+  </button>
+</div>
       </motion.nav>
 
       {/* Mobile Menu */}
@@ -110,7 +115,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#about"
-                className="text-white/80 no-underline text-sm font-medium tracking-[1.5px] uppercase hover:text-[#4ab866]"
+                className="text-white/80 no-underline text-sm font-medium tracking-[1.5px] uppercase hover:text-[#4ab866] block"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
@@ -119,7 +124,7 @@ export default function Navbar() {
             <li>
               <a
                 href="/services"
-                className="text-white/80 no-underline text-sm font-medium tracking-[1.5px] uppercase hover:text-[#4ab866]"
+                className="text-white/80 no-underline text-sm font-medium tracking-[1.5px] uppercase hover:text-[#4ab866] block"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
@@ -128,7 +133,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#founder"
-                className="text-white/80 no-underline text-sm font-medium tracking-[1.5px] uppercase hover:text-[#4ab866]"
+                className="text-white/80 no-underline text-sm font-medium tracking-[1.5px] uppercase hover:text-[#4ab866] block"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Founder
@@ -137,7 +142,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#offices"
-                className="text-white/80 no-underline text-sm font-medium tracking-[1.5px] uppercase hover:text-[#4ab866]"
+                className="text-white/80 no-underline text-sm font-medium tracking-[1.5px] uppercase hover:text-[#4ab866] block"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Offices
